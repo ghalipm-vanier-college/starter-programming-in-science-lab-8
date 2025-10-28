@@ -16,10 +16,9 @@ Written in Python, and tested with **unittest**.
      The vectors `A` and `B` must have the same length.
 
    #### Mathematical Definition:
-   \[
+   $$
    \vec{A} \cdot \vec{B} = \sum_{i=1}^{n} (A_i \times B_i)
-   \]
-
+   $$
    #### Example:
    ```python
    dot_product([1, 2, 3], [4, 5, 6])  # Returns 32
