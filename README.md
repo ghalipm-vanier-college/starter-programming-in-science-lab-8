@@ -1,41 +1,67 @@
+
+420-SN1-RE: Programming in Science Fall 2025, Section 007 and Section 008  
+
 # Programming in Science - Lab 8
 
-This template repository is the starter project for **Programming in Science Lab 8**. Written in Python, and tested with Pytest.
+This template repository is the starter project for **Programming in Science Lab 8**.  
+Written in Python, and tested with **unittest**.
+
+---
 
 ### Question(s)
 
-1. **(50%)** Magic Square Validation:
+1. **(50%)** Dot Product of Two Vectors:
    
-   - Write a function `is_magic_square(matrix)` that checks if a given **N x N** matrix is a magic square.
-   
+   - Write a function `dot_product(A, B)` that computes and returns the **dot product** of two vectors.  
+     The vectors `A` and `B` must have the same length.
+
+   #### Mathematical Definition:
+   \[
+   \vec{A} \cdot \vec{B} = \sum_{i=1}^{n} (A_i \times B_i)
+   \]
+
    #### Example:
    ```python
-   is_magic_square([[4, 9, 2], [3, 5, 7], [8, 1, 6]])  # Returns True
-   is_magic_square([[4, 9, 2], [8, 1, 6], [3, 5, 7]])  # Returns False
-   ```
-   ✅ **Hints:** Verify that all rows, columns, and both diagonals sum to the same value.
+   dot_product([1, 2, 3], [4, 5, 6])  # Returns 32
+````
 
-2. **(50%)** Magic Square Generator:
+
+✅ **Hints:**
+
+* Multiply corresponding elements of both vectors.
+* Use a loop or list comprehension to accumulate the sum.
+* Ensure both vectors are of the same size before computing.
+
+---
+
+
+2. **(50%)** Determine Orthogonality:
    
-   - Write a function `generate_magic_square(n)` that generates an **N x N** magic square for an odd integer **N**.
-   
+   - Write a function `is_orthogonal(V, W)` that determines whether two vectors **V** and **W** are **perpendicular (orthogonal)** based on their dot product.
+   - Use the principle that **two non-zero vectors are orthogonal if their dot product equals zero**.
+
    #### Example:
    ```python
-   generate_magic_square(3)
-   ```
-   ![](Q2_1.png)  
+   is_orthogonal([1, 2], [-2, 1])   # Returns True
+   is_orthogonal([2, 3], [4, 5])    # Returns False
 
-   ```python
-   generate_magic_square(5)
-   ```
-   ![](Q2_2.png)
 
-   ✅ **Hints:** Start at the **bottom middle** and use diagonal movement to the **right and down**, wrapping around where necessary.
+✅ **Hints:**
+
+* Use your `dot_product()` function to compute the dot product of the two vectors.
+* If the dot product equals 0, return `True`; otherwise, return `False`.
+* Remember to verify that both vectors are **non-zero** before testing orthogonality.
+
 
 ### Run Command
 
-To run the tests, use the following command:
+To run the tests, use the following command in your terminal:
 
+```bash
+python -m unittest test_Lab9.py
 ```
-pytest
-```
+
+---
+
+
+
