@@ -16,4 +16,4 @@ def test_is_orthogonal():
     assert is_orthogonal([1, 2], [-2, 1]) == True     # perpendicular
     assert is_orthogonal([2, 3], [4, 5]) == False     # not perpendicular
     assert is_orthogonal([0, 0], [1, 2]) == False     # zero vector → not valid orthogonal
-    assert is_orthogonal([3, -3], [3, 3])_
+    assert is_orthogonal([3, -3], [3, 3]) == True 
