@@ -1,11 +1,21 @@
-import numpy as np
+# Programming in Science - Lab 8
+# Written in Python
+# Create 2 functions
 
-# Function 1: Check if a Matrix is a Magic Square
-# This function checks if a given N x N matrix is a magic square.
-def is_magic_square(matrix):
-   return False
+# Function 1: Dot Product of Two Vectors
+# This function takes two lists of equal length and returns the dot product.
+# The dot product is the sum of the products of corresponding elements.
+# Example:
+# dot_product([1, 2, 3], [4, 5, 6]) → 32
+def dot_product(A, B):
+    return 0
 
-# Function 2: Generate a Magic Square for an Odd Integer n
-# This function generates an N x N magic square for an odd integer n.
-def generate_magic_square(array_size):
-   return [[]]
+
+# Function 2: Determine Orthogonality
+# This function checks whether two non-zero vectors are perpendicular (orthogonal).
+# Two vectors are orthogonal if their dot product equals zero.
+# Example:
+# is_orthogonal([1, 2], [-2, 1]) → True
+# is_orthogonal([2, 3], [4, 5]) → False
+def is_orthogonal(V, W):
+    return False
